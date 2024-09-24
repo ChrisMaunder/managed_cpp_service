@@ -46,22 +46,21 @@ name and an ID (`string` and `int` values respectively). 
 ```C++
 __value public struct ClientData
 {
-String *Name;
-int    ID;
+    String *Name;
+    int    ID;
 };
-```C++
-```C++
+
 __gc public class ClientInfo
 {
-String *Name;
-int    ID;
+    String *Name;
+    int    ID;
 };
-```C++
+```
 In order to return an array of objects a quick typedef is also declared
 
 ```C++
 typedef ClientData ClientArray[];
-```C++
+```
 In a similar fashion  I defined my `MyService` class as a simple managed C++
 class with three methods:
 
@@ -105,7 +104,7 @@ public:
     ClientArray GetClientsData(int Number);
 };
 }
-```C++
+```
 The important thing to notice about the function prototypes
 is the `[WebMethod]` attribute - this informs the compiler that the method will be a method of a
 web service, and that it should provide the appropriate support and plumbing. The method you attach this
@@ -162,7 +161,7 @@ ClientArray MyService::GetClientsData(int Number)
     return data;
 }
 };
-```C++
+```
 Note the use of the syntax `i.ToString()`. In .NET, value types such as int's and enums can
 have methods associated with them. `i.ToString()` simply calls the `Int32::ToString()`
 for the variable *i*. 
@@ -178,14 +177,14 @@ Once you have the changes in place you can build the project then test the servi
 on the *CPPWebService.asmx* in the Solution Explorer in Visual Studio and
 choosing "View in Browser". The test page is shown below.
 
-![](myCPPService/asmx_page.GIF)
+![myCPPService](https://raw.githubusercontent.com/ChrisMaunder/mycppservice/master/docs/assets/asmx_page.GIF)
 
 Clicking on one of the methods (say, `GetClientsData`) results in a
 proxy page being presented which allows you to invoke the method directly from
 your browser. The `GetClientsData` method takes a single `int `parameter
 which you can enter in the edit box.
 
-![](myCPPService/test_webmethod.GIF)
+![myCPPService](https://raw.githubusercontent.com/ChrisMaunder/mycppservice/master/docs/assets/test_webmethod.GIF)
 
 When invoked this returns the following:
 
