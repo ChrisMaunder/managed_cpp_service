@@ -177,18 +177,18 @@ Once you have the changes in place you can build the project then test the servi
 on the *CPPWebService.asmx* in the Solution Explorer in Visual Studio and
 choosing "View in Browser". The test page is shown below.
 
-![](https://raw.githubusercontent.com/ChrisMaunder/mycppservice/master/docs/assets/asmx_page.gif)
+![](https://raw.githubusercontent.com/ChrisMaunder/managed_cpp_service/master/docs/assets/asmx_page.gif)
 
 Clicking on one of the methods (say, `GetClientsData`) results in a
 proxy page being presented which allows you to invoke the method directly from
 your browser. The `GetClientsData` method takes a single `int `parameter
 which you can enter in the edit box.
 
-![](https://raw.githubusercontent.com/ChrisMaunder/mycppservice/master/docs/assets/test_webmethod.gif)
+![](https://raw.githubusercontent.com/ChrisMaunder/managed_cpp_service/master/docs/assets/test_webmethod.gif)
 
 When invoked this returns the following:
 
-![](https://raw.githubusercontent.com/ChrisMaunder/mycppservice/master/docs/assets/result.gif)
+![](https://raw.githubusercontent.com/ChrisMaunder/managed_cpp_service/master/docs/assets/result.gif)
 
 ## Conclusion
 
